@@ -1,0 +1,9 @@
+<mat-chip-list>
+  <mat-chip *ngFor="let user of entry" [selectable]="selectable"
+            [removable]="isGuestChip(user)" (removed)="remove(user)"  [ngStyle]="isGuestChip(user) && {'background-color': 'green'}" >
+    {{user.entry.firstName}}
+    <mat-icon matChipRemove *ngIf="enabled">cancel</mat-icon>
+  </mat-chip>
+
+</mat-chip-list>
+
